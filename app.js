@@ -1,11 +1,12 @@
-// Requiring http module
-var http = require('http');
+// Requiring express module
+var express = require('express');
 
-// Creating http server
-http.createServer(function(req, res) {
-	res.writeHead(200); // Setting header response code
-	res.write('Hello World!'); // Writing to body
-	res.end(); // Ending response
-}).listen(8000); // Listening at port
+// Initiating express app
+var app = express();
 
-console.log('Server Running...'); // Logging to server console
+// Serving static file on default route get
+app.get('/', function(req, res) {
+	res.sendFile(__dirname+'/www/index.html');
+}).listen(8000);
+
+console.log('Server Running...');

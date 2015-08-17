@@ -19,7 +19,12 @@ ig.use({
 
 // Serving static file on default route get
 app.get('/', function(req, res) {
-	res.render('pages/index');
+	// use the instagram package to get popular media
+	ig.media_popular(function(err, medias, remaining, limit) { 
+		// render the home page and pass in the popular images 
+		console.log(medias);
+		res.render('pages/index', { grams: medias });
+	});
 }).listen(8000);
 
 console.log('Server Running...');

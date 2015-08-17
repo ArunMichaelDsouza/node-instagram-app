@@ -7,13 +7,13 @@ var ig = require('instagram-node').instagram();
 var app = express();
 
 // Setting root folder to look for static files
-app.use(express.static(__dirname+'/www/'));
+app.use(express.static(__dirname+'/assets'));
 // Setting view engine to ejs
 app.set('view engine', 'ejs');
 
 // Serving static file on default route get
 app.get('/', function(req, res) {
-	res.sendFile('index.html');
+	res.render('pages/index');
 }).listen(8000);
 
 console.log('Server Running...');

@@ -10,7 +10,7 @@
     "test"
   ],
   "author": "Arun Michael Dsouza",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.13.3",
     "nodemon": "^1.4.1"

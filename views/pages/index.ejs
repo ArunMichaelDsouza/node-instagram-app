@@ -3,29 +3,30 @@
 	<head>
 		<% include ../partials/head %>
 	</head>
-	<body class="container">
+	<body>
 		<header>
 			<% include ../partials/header %>
 		</header>
-		<main>
+		<main class="container">
 			<div class="row">
-				<% grams.forEach(function(gram) { %> 
-				<div class="instagram-pic col-sm-3">
-					<a href="<%= gram.link %>" target="_blank">
-						<img src="<%= gram.images.standard_resolution.url %>" class="img-responsive">
-					</a>
-					<div class="instagram-bar"> 
-						<div class="likes">
-							<span class="glyphicon glyphicon-heart"></span>
-								<%= gram.likes.count %> 
+				<% images.forEach(function(data) { %>
+				<div class="col-sm-3">
+					<a href="<%= data.link %>" target="_blank" class="img-wrapper">
+						<img class="img-responsive" src="<%= data.images.standard_resolution.url %>"/>
+						<div class="stat-bar row">
+							<div class="pull-left">
+								<span class="glyphicon glyphicon-heart"></span>
+								<%= data.likes.count %>
+							</div>
+							<div class="pull-right">
+								<span class="glyphicon glyphicon-comment"></span>
+								<%= data.comments.count %>
+							</div>
 						</div>
-					<div class="comments">
-						<span class="glyphicon glyphicon-comment"></span> 
-						<%= gram.comments.count %>
-					</div> 
+					</a>
 				</div>
+				<% }); %>
 			</div>
-			<% }); %> </div>
 		</main>
 		<footer>
 			<% include ../partials/footer %>

@@ -1,36 +1,83 @@
-body {
-	padding-top: 50px;
+.navbar-inverse {
+    border-radius: 0;
+    background-color: #2C6991;
+    box-shadow: 0px 0px 2px #777;
+    border: none;
+}
+
+.navbar-header {
+    float: left;
+}
+
+.navbar-right {
+    margin-right: 0;
+    float: right;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+    font-weight: 300;
+    display: block;
+    padding-left: 0;
+}
+
+.navbar-inverse .navbar-brand > img {
+    width: 90px;
+    margin: 0 20px;
+    height: auto;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    cursor: pointer;
+}
+
+.img-wrapper {
+    display: block;
+    margin: 20px 10px;
+    box-shadow: 1px 2px 1px #777;
+    position: relative;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.stat-bar {
+    position: absolute;
+    margin: -40px 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+}
+
+.img-wrapper > img {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+    width: 100%;
+    height: auto;
+}
+
+.img-wrapper > img:hover {
+    -ms-transform: scale(1.2,1.2) rotate(10deg);
+    -webkit-transform: scale(1.2,1.2) rotate(10deg); 
+    transform: scale(1.2,1.2) rotate(10deg);
 }
 
 footer {
-	padding: 50px;
+    padding: 0 15px;
 }
 
-.instagram-pic     {
-    position:relative;
-    padding:10px;
-    overflow:hidden;
-￼}
-.instagram-pic img {
-    padding:5px;
-    border-radius:2px;
-    box-shadow:0 0 5px rgba(0, 0, 0, 0.5);
+strong {
+    margin: 0 10px;
+    font-weight: 400;
+    color: #333;
 }
-.instagram-bar     {
-    position:absolute;
-    bottom:30px;
-    width:100%;
-    left:0;
-    padding-left:30px;
-    padding-right:30px;
-    color:#FFF;
-}
-.instagram-bar span   {
-    margin-right:5px;
-}
-.instagram-bar .likes {
-    float:left;
-}
-.instagram-bar .comments {
-    float:right;
+
+.github-logo {
+    margin: 7px;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 2px solid #fff;
 }

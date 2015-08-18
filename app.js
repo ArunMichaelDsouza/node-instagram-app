@@ -17,4 +17,4 @@ app.get('/', function(req, res) {
 	});
 }).listen(8000);	
 
-console.log('Running...');
+console.log('Server Running...');

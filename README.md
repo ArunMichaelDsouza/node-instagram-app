@@ -1,2 +1,2 @@
 # node-test
-Just a test app built with Node
+Test app built with Node to display popular images from Instagram. Uses express and instagram api. 

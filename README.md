@@ -1,6 +1,9 @@
 # node-test
-Test app built with Node to display popular images from Instagram. Uses express and instagram api. 
+Test app built with Node to display popular images from Instagram. 
 
+Uses express and instagram api. 
+
+<br/>
 ![Popular Instagram Images using Node](https://raw.githubusercontent.com/ArunMichaelDsouza/node-test/master/assets/img/Screenshot.png)
 
 ## License
